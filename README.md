@@ -64,7 +64,9 @@ start local server
 
 $ flask run
 * Running on http://127.0.0.1:5000/
+
 or
+
 $ python 1main.py
 * Running on http://127.0.0.1:5000/
 
@@ -98,6 +100,8 @@ $vi 2main.py
 create a directory mydir/templates
 inside templates directory create file home1.html
 
+'''
+
 	  <!DOCTYPE html>
 	  <html lang="en" dir="ltr">
 
@@ -110,11 +114,14 @@ inside templates directory create file home1.html
 
 	   </div>
 	  </html>
+	  
+'''
 
 $ export FLASK_APP=2main.py
 
 start local server
 $ flask run
+
 * Running on http://127.0.0.1:5000/
 
 open web browser to http://127.0.0.1:5000
@@ -155,6 +162,8 @@ $vi 3main.py
 inside templates directory create file about.html
 vi about.html
 
+'''
+
   <!DOCTYPE html>
   <html lang="en" dir="ltr">
 
@@ -167,11 +176,14 @@ vi about.html
 
    </div>
   </html>
+  
+'''
 
 $ export FLASK_APP=3main.py
 
 start local server
 $ flask run
+
 * Running on http://127.0.0.1:5000/
 
 open web browser to http://127.0.0.1:5000
@@ -260,6 +272,7 @@ $ export FLASK_APP=main.py
 
 start local server
 $ flask run
+
 * Running on http://127.0.0.1:5000/
 
 open web browser to http://127.0.0.1:5000
