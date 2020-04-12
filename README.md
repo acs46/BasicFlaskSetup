@@ -34,6 +34,7 @@ $ pip3 freeze  # shows all packages installed in virtual env
 ##*****************************************************************************************##
 ## Make sure all the packages in requirements file are installed for this example to work  ##
 ##*****************************************************************************************##
+
 $ pip3 install -r requirements.txt  ## install all packages for basicflasksetup  to run application
 
 $ pip3 freeze > requirements.txt	#will create file 'requirements.txt' listing all packages currently loaded
