@@ -3,45 +3,45 @@ Simple framework w/ Navigation Menu
 
 $ pip3 list # lists currently installed modules
 
-Create a project directory for your stuff
-$ cd ~/mydir
-Unzip BasicFlaskSetup.zip
-$ create .gitignore (for any files don't need in repo)
-$ git init
+Create a project directory for your stuff  
+$ cd ~/mydir  
+Unzip BasicFlaskSetup.zip  
+$ create .gitignore (for any files don't need in repo)  
+$ git init  
 
 
 Virtual Environments
 
-Creates venv directory in your project directory
-$ python3 -m venv venv  	# could call the virtual env something else i.e. python3 -m venv myenviro
-$ source venv/bin/activate	# activate the virtual environment in your current project dir 
-$ deactivate			# deactivate turns off virtual environment
+Creates venv directory in your project directory  
+$ python3 -m venv venv  	# could call the virtual env something else i.e. python3 -m venv myenviro  
+$ source venv/bin/activate	# activate the virtual environment in your current project dir   
+$ deactivate			# deactivate turns off virtual environment  
 
-for python2
-$ sudo pip install virtualenv
-$ virtualenv venv
+for python2  
+$ sudo pip install virtualenv  
+$ virtualenv venv  
 
-for Windows environment run as Admin
-$ pip install virtualenv
-$ virtual venv
-$ venv\Scripts\activate
+for Windows environment run as Admin  
+$ pip install virtualenv  
+$ virtual venv  
+$ venv\Scripts\activate  
 
-$ pip3 install flask
-or
-$ pip install flask
-$ pip3 freeze  # shows all packages installed in virtual env
+$ pip3 install flask  
+or  
+$ pip install flask  
+$ pip3 freeze  # shows all packages installed in virtual env  
 
-##*****************************************************************************************##
-## Make sure all the packages in requirements file are installed for this example to work  ##
-##*****************************************************************************************##
+*****************************************************************************************  
+ Make sure all the packages in requirements file are installed for this example to work   
+*****************************************************************************************  
 
-$ pip3 install -r requirements.txt  ## install all packages for basicflasksetup  to run application
+$ pip3 install -r requirements.txt  ## install all packages for basicflasksetup  to run application  
 
-$ pip3 freeze > requirements.txt	#will create file 'requirements.txt' listing all packages currently loaded
+$ pip3 freeze > requirements.txt	#will create file 'requirements.txt' listing all packages currently loaded  
 
 
-Part 1 - Create the app
-create  mydir/1main.py
+Part 1 - Create the app  
+create  mydir/1main.py  
 
       from flask import Flask
 
@@ -62,22 +62,22 @@ $ export FLASK_APP=1main.py
 
 start local server
 
-$ flask run
+$ flask run  
 * Running on http://127.0.0.1:5000/
 
 or
 
-$ python 1main.py
+$ python 1main.py  
 * Running on http://127.0.0.1:5000/
 
 open web browser to http://127.0.0.1:5000
-(or localhost:5000)
+(or localhost:5000)  
 control+C in the terminal window to quit server
 
 
 
-Part2 - Add a template page to app
-Create a new version of the app called 2main.py and a template called templates/home1.html
+Part2 - Add a template page to app  
+Create a new version of the app called 2main.py and a template called templates/home1.html  
 
 $vi 2main.py 
 
@@ -97,10 +97,9 @@ $vi 2main.py
 	    app.run(debug=True)
 
 
-create a directory mydir/templates
-inside templates directory create file home1.html
+create a directory mydir/templates  
+inside templates directory create file home1.html  
 
-'''
 
 	  <!DOCTYPE html>
 	  <html lang="en" dir="ltr">
@@ -115,23 +114,22 @@ inside templates directory create file home1.html
 	   </div>
 	  </html>
 	  
-'''
 
 $ export FLASK_APP=2main.py
 
-start local server
-$ flask run
+start local server  
+$ flask run  
 
 * Running on http://127.0.0.1:5000/
 
-open web browser to http://127.0.0.1:5000
-(or localhost:5000)
-control+C in the terminal window to quit server
+open web browser to http://127.0.0.1:5000  
+(or localhost:5000)  
+control+C in the terminal window to quit server  
 
 
 
-Part 3 - Add another route (about) and a navigation menu using bootstrap
-Create a new version of the app called 3main.py and a template called templates/about.html
+Part 3 - Add another route (about) and a navigation menu using bootstrap  
+Create a new version of the app called 3main.py and a template called templates/about.html  
 
 $vi 3main.py 
 
@@ -159,40 +157,37 @@ $vi 3main.py
 	    app.run(debug=True)
 
 
-inside templates directory create file about.html
-vi about.html
+inside templates directory create file about.html  
+vi about.html  
 
-'''
+	  <!DOCTYPE html>
+	  <html lang="en" dir="ltr">
 
-  <!DOCTYPE html>
-  <html lang="en" dir="ltr">
+	  <title>First Flask Page</title>
 
-  <title>First Flask Page</title>
+	   <div class="page-header">
+	    <h1> My Awesome Bioinformatics Project </h1>
+	    <p> Flask is Functional </p>
+	    <h1>Hello World!</h1>
 
-   <div class="page-header">
-    <h1> My Awesome Bioinformatics Project </h1>
-    <p> Flask is Functional </p>
-    <h1>Hello World!</h1>
-
-   </div>
-  </html>
-  
-'''
-
-$ export FLASK_APP=3main.py
-
-start local server
-$ flask run
-
-* Running on http://127.0.0.1:5000/
-
-open web browser to http://127.0.0.1:5000
-(or localhost:5000)
-control+C in the terminal window to quit server
+	   </div>
+	  </html>
 
 
-Part 4 - Add more routes pg2, search, refs, help and use form to catch user input and add error pages
-Create a new version of the app called main.py and a template called templates/pg2 search ref help etc.
+$ export FLASK_APP=3main.py  
+
+start local server  
+$ flask run  
+
+* Running on http://127.0.0.1:5000/  
+
+open web browser to http://127.0.0.1:5000  
+(or localhost:5000)  
+control+C in the terminal window to quit server  
+
+
+Part 4 - Add more routes pg2, search, refs, help and use form to catch user input and add error pages  
+Create a new version of the app called main.py and a template called templates/pg2 search ref help etc.  
 
 $vi main.py
 	from datetime import datetime 
@@ -268,21 +263,21 @@ $vi main.py
 
 inside templates directory new pages are created for pg2 search ref help errors etc
 
-$ export FLASK_APP=main.py
+$ export FLASK_APP=main.py  
 
-start local server
-$ flask run
+start local server  
+$ flask run  
 
-* Running on http://127.0.0.1:5000/
+* Running on http://127.0.0.1:5000/  
 
-open web browser to http://127.0.0.1:5000
-(or localhost:5000)
-control+C in the terminal window to quit server
+open web browser to http://127.0.0.1:5000  
+(or localhost:5000)  
+control+C in the terminal window to quit server  
 
 
-# Save changes using git
-git add .
-git commit -m "finished editing"
+Save changes using git  
+git add .  
+git commit -m "finished editing"  
 
-Deactivate virtual environment when you're finished
-$ deactivate 
+Deactivate virtual environment when you're finished  
+$ deactivate  
