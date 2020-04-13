@@ -40,7 +40,7 @@ $ pip3 install -r requirements.txt  ## install all packages for basicflasksetup 
 $ pip3 freeze > requirements.txt	#will create file 'requirements.txt' listing all packages currently loaded  
 
 
-Part 1 - Create the app  
+## Part 1 - Create the app  
 create  mydir/1main.py  
 
       from flask import Flask
@@ -76,7 +76,7 @@ control+C in the terminal window to quit server
 
 
 
-Part2 - Add a template page to app  
+## Part2 - Add a template page to app  
 Create a new version of the app called 2main.py and a template called templates/home1.html  
 
 $vi 2main.py 
@@ -128,7 +128,7 @@ control+C in the terminal window to quit server
 
 
 
-Part 3 - Add another route (about) and a navigation menu using bootstrap  
+## Part 3 - Add another route (about) and a navigation menu using bootstrap  
 Create a new version of the app called 3main.py and a template called templates/about.html  
 
 $vi 3main.py 
@@ -186,7 +186,7 @@ open web browser to http://127.0.0.1:5000
 control+C in the terminal window to quit server  
 
 
-Part 4 - Add more routes pg2, search, refs, help and use form to catch user input and add error pages  
+## Part 4 - Add more routes pg2, search, refs, help and use form to catch user input and add error pages  
 Create a new version of the app called main.py and a template called templates/pg2 search ref help etc.  
 
 $vi main.py
